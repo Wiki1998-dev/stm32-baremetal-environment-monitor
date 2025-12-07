@@ -6,7 +6,7 @@
 
 ---
 
-**Planned Features**
+**Sprint1-Feature1_addition**
 
 - **System Clock:** HSI 48MHz configuration via RCC registers
 - **SysTick Timer:** 1ms timebase with overflow-safe delays
