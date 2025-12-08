@@ -1,3 +1,4 @@
+**Note: This project is re Implementation for opensource access previously this project had been done with company and code were not able to be shared !!!!!******
 **Goals:**
 - Build a complete environment monitoring station from scratch using:
 - Custom register-level drivers (GPIO, UART, ADC, I2C, SPI)
