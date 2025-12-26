@@ -1,7 +1,4 @@
-**Note: This project is re Implementation for opensource access previously this project had been done with company and code were not able to be shared !!!!!******
 
----
-**Sprint1**
 
 **Goals:**
 - Build a complete environment monitoring station from scratch using:
