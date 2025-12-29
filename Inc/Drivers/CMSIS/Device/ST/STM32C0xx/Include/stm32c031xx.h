@@ -109,6 +109,10 @@ typedef enum
 /** @addtogroup Peripheral_registers_structures
   * @{
   */
+/*Generic Macros
+ *
+ *
+ */
 
 /**
   * @brief Analog to Digital Converter
@@ -507,7 +511,21 @@ typedef struct
 #define FLASH_SIZE            ((((*((uint16_t *)FLASHSIZE_BASE)) == 0xFFFFU)) ? FLASH_SIZE_DEFAULT : \
                                ((((*((uint16_t *)FLASHSIZE_BASE)) == 0x0000U)) ? FLASH_SIZE_DEFAULT : \
                                 (((uint32_t)(*((uint16_t *)FLASHSIZE_BASE)) & (0xFFFFU)) << 10U)))
+//NVIC_ISPR
+#define NVIC_IPR  (volatile uint32_t*)0xE000E200
+#define NVIC_PR_BASEADDRESS  (volatile uint32_t*)0xE000E400
 
+//nvic -may be needed to change for the M0 processor
+#define NVIC_ISER0  (volatile uint32_t*)0xE000E100
+#define NVIC_ISER1  (volatile uint32_t*)0xE000E104
+#define NVIC_ISER2  (volatile uint32_t*)0xE000E108
+#define NVIC_ISER3  (volatile uint32_t*)0xE000E10C
+
+//now to reset those
+#define NVIC_ICER0  (volatile uint32_t*)0xE000E180
+#define NVIC_ICER1  (volatile uint32_t*)0xE000E184
+#define NVIC_ICER2  (volatile uint32_t*)0xE000E188
+#define NVIC_ICER3  (volatile uint32_t*)0xE000E18C
 /*!< Peripheral memory map */
 #define APBPERIPH_BASE        (PERIPH_BASE)
 #define AHBPERIPH_BASE        (PERIPH_BASE + 0x00020000UL)
